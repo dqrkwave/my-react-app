@@ -1,0 +1,1223 @@
+/* General Styling for All Threat Pages */
+.page-container {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.page-container h2 {
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.page-container p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-family: 'Verdana', sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease;
+}
+
+.page-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.page-container:hover h2 {
+    color: #fff;
+}
+
+/* Nuclear War */
+/* Nuclear War */
+.nuclear-war {
+    background: linear-gradient(135deg, #ff4d4d, #ff0000); /* Red gradient background */
+    color: white; /* White text for readability */
+    border-left: 5px solid #d10000; /* Strong red border for emphasis */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    position: relative;
+    overflow: hidden; /* Ensure child elements do not overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect to Zoom and Lift */
+.nuclear-war:hover {
+    background: linear-gradient(135deg, #d10000, #ff4d4d); /* Darker red gradient on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Lift effect */
+}
+
+.nuclear-war h2 {
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center; /* Center align the title */
+    transition: color 0.3s ease;
+}
+
+.nuclear-war p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-family: 'Verdana', sans-serif;
+    color: rgba(255, 255, 255, 0.85); /* Slightly transparent white text */
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for paragraphs */
+.nuclear-war p:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+    cursor: pointer; /* Indicate interactivity */
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Highlight keywords in paragraphs */
+.nuclear-war p span {
+    font-weight: bold;
+    color: #ffeb3b; /* Yellow for emphasis */
+}
+
+/* Heading styles */
+.nuclear-war h3 {
+    font-size: 2em;
+    font-family: 'Verdana', sans-serif;
+    color: #ffeb3b; /* Yellow color for subheadings */
+    margin-top: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for headings */
+.nuclear-war h3:hover {
+    color: #fff; /* White color for subheading on hover */
+}
+
+/* Image Container for better interaction */
+.nuclear-war .image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Hover effect for images - Zoom In */
+.nuclear-war .threat-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nuclear-war .threat-image:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Links Styling */
+.nuclear-war a {
+    color: #ffeb3b; /* Yellow for links to stand out */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nuclear-war a:hover {
+    color: #ff5722; /* Orange on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Buttons */
+.nuclear-war .button {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.nuclear-war .button:hover {
+    background-color: #d84315;
+    transform: scale(1.05); /* Slight button enlargement */
+}
+
+/* Add animations for content reveal on scroll */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nuclear-war h2, .nuclear-war p, .nuclear-war h3 {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+.nuclear-war h2 {
+    animation-delay: 0.3s;
+}
+
+.nuclear-war p {
+    animation-delay: 0.6s;
+}
+
+.nuclear-war h3 {
+    animation-delay: 0.9s;
+}
+
+/* Interactive Scroll Effect */
+.nuclear-war.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Trigger scroll animation when the section is in view */
+@media screen and (max-width: 768px) {
+    /* Adaptations for mobile */
+    .nuclear-war {
+        padding: 15px;
+    }
+
+    .nuclear-war h2 {
+        font-size: 2em;
+    }
+
+    .nuclear-war p {
+        font-size: 1em;
+    }
+}
+
+
+/* Climate Change */
+/* Climate Change */
+.climate-change {
+    background: linear-gradient(135deg, #a8e063, #5a8f2f);
+    color: #2d6a2f;
+    border-left: 5px solid #6e9f3b;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover effect for Climate Change Section */
+.climate-change:hover {
+    background: linear-gradient(135deg, #6e9f3b, #a8e063);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Title - Make it bigger and add a subtle text-shadow */
+.climate-change h2 {
+    font-size: 3em;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for title */
+.climate-change h2:hover {
+    color: #ffeb3b; /* Yellow for better emphasis */
+}
+
+/* Paragraphs with more readable color contrast */
+.climate-change p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-family: 'Verdana', sans-serif;
+    color: rgba(45, 106, 47, 0.9);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for paragraphs */
+.climate-change p:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background change */
+    cursor: pointer;
+    transform: scale(1.02); /* Zoom effect */
+}
+
+/* Highlight keywords or important terms in the text */
+.climate-change p span {
+    font-weight: bold;
+    color: #ffeb3b; /* Bright yellow */
+}
+
+/* Subheadings with a yellow accent */
+.climate-change h3 {
+    font-size: 2.5em;
+    font-family: 'Verdana', sans-serif;
+    color: #ffeb3b;
+    margin-top: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for subheadings */
+.climate-change h3:hover {
+    color: #fff;
+}
+
+/* Image Container with Hover Animation */
+.climate-change .image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Hover effect for images - Zoom In */
+.climate-change .threat-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.climate-change .threat-image:hover {
+    transform: scale(1.1); /* Zoom effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Links Styling */
+.climate-change a {
+    color: #2d6a2f;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.climate-change a:hover {
+    color: #ffeb3b; /* Yellow on hover */
+    text-decoration: underline; /* Add underline for clarity */
+}
+
+/* Button Styling */
+.climate-change .button {
+    background-color: #ffeb3b;
+    color: #2d6a2f;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.climate-change .button:hover {
+    background-color: #fdd835;
+    transform: scale(1.05); /* Slight enlargement */
+}
+
+/* Animation for content reveal */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.climate-change h2, .climate-change p, .climate-change h3 {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+/* Delayed animation for each element */
+.climate-change h2 {
+    animation-delay: 0.3s;
+}
+
+.climate-change p {
+    animation-delay: 0.6s;
+}
+
+.climate-change h3 {
+    animation-delay: 0.9s;
+}
+
+/* Mobile Adaptations */
+@media screen and (max-width: 768px) {
+    /* Adaptation for mobile devices */
+    .climate-change {
+        padding: 15px;
+    }
+
+    .climate-change h2 {
+        font-size: 2em;
+    }
+
+    .climate-change p {
+        font-size: 1em;
+    }
+
+    .climate-change .button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Global Pandemics */
+/* Global Pandemics */
+.global-pandemics {
+    background: linear-gradient(135deg, #00bcd4, #0097a7); /* Soft blue to teal gradient, symbolizing calm but urgent */
+    color: white; /* White text for readability */
+    border-left: 5px solid #007c8c; /* Deep teal border for emphasis */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover Effect for Global Pandemics Section */
+.global-pandemics:hover {
+    background: linear-gradient(135deg, #007c8c, #00bcd4); /* Darker gradient on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Increased shadow */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+/* Title Styling */
+.global-pandemics h2 {
+    font-size: 2.8em;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Title */
+.global-pandemics h2:hover {
+    color: #ffeb3b; /* Bright yellow for emphasis */
+}
+
+/* Paragraphs Styling */
+.global-pandemics p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-family: 'Verdana', sans-serif;
+    color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for paragraphs */
+.global-pandemics p:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background change */
+    cursor: pointer; /* Pointer to indicate interactivity */
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Highlight keywords in paragraphs */
+.global-pandemics p span {
+    font-weight: bold;
+    color: #ffeb3b; /* Bright yellow for emphasis */
+}
+
+/* Subheading Styling */
+.global-pandemics h3 {
+    font-size: 2.2em;
+    font-family: 'Verdana', sans-serif;
+    color: #ffeb3b; /* Yellow for subheadings */
+    margin-top: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for subheadings */
+.global-pandemics h3:hover {
+    color: #ffffff; /* White color for subheading on hover */
+}
+
+/* Image Container */
+.global-pandemics .image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Hover effect for images - Zoom In */
+.global-pandemics .threat-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.global-pandemics .threat-image:hover {
+    transform: scale(1.1); /* Zoom effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Links Styling */
+.global-pandemics a {
+    color: #ffeb3b; /* Yellow for links */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.global-pandemics a:hover {
+    color: #ff5722; /* Orange color on hover */
+    text-decoration: underline; /* Add underline for better visibility */
+}
+
+/* Button Styling */
+.global-pandemics .button {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Buttons */
+.global-pandemics .button:hover {
+    background-color: #d84315; /* Darker orange */
+    transform: scale(1.05); /* Slight button enlargement */
+}
+
+/* Keyframe Animation for Fade In */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.global-pandemics h2, .global-pandemics p, .global-pandemics h3 {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+.global-pandemics h2 {
+    animation-delay: 0.3s;
+}
+
+.global-pandemics p {
+    animation-delay: 0.6s;
+}
+
+.global-pandemics h3 {
+    animation-delay: 0.9s;
+}
+
+/* Mobile Adaptation */
+@media screen and (max-width: 768px) {
+    .global-pandemics {
+        padding: 15px;
+    }
+
+    .global-pandemics h2 {
+        font-size: 2em;
+    }
+
+    .global-pandemics p {
+        font-size: 1em;
+    }
+
+    .global-pandemics .button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Artificial General Intelligence */
+/* Artificial General Intelligence (AGI) */
+.agi {
+    background: linear-gradient(135deg, #2196f3, #0b7dda);
+    color: white;
+    border-left: 5px solid #0b7dda;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: slideIn 1s ease-out; /* Subtle animation for the entire section */
+}
+
+/* Hover Effect for AGI Section */
+.agi:hover {
+    background: linear-gradient(135deg, #0b7dda, #2196f3); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Increased shadow */
+    cursor: pointer;
+}
+
+/* Background animation for a dynamic feel */
+@keyframes moveBackground {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Title Styling */
+.agi h2 {
+    font-size: 3.5em;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4); /* Deep shadow for emphasis */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Title */
+.agi h2:hover {
+    color: #ffeb3b; /* Bright yellow for emphasis */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Paragraph Styling with Smooth Fade-in Effect */
+.agi p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-family: 'Verdana', sans-serif;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.2s forwards;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Delayed Animation for Paragraphs */
+.agi p:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.agi p:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.agi p:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* Hover Effect for Paragraphs */
+.agi p:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    transform: scale(1.02); /* Slight zoom */
+    cursor: pointer; /* Indicate interactivity */
+}
+
+/* Subheading Styling */
+.agi h3 {
+    font-size: 2.5em;
+    font-family: 'Verdana', sans-serif;
+    color: #ffeb3b; /* Bright yellow for subheadings */
+    margin-top: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Subheadings */
+.agi h3:hover {
+    color: #ffffff; /* White color for subheading on hover */
+}
+
+/* Button Styling with Interactive Effects */
+.agi .button {
+    background-color: #ffeb3b;
+    color: #0b7dda;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Button */
+.agi .button:hover {
+    background-color: #ff5722; /* Orange color on hover */
+    color: white; /* Text color changes to white */
+    transform: scale(1.05); /* Slight button enlargement */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Content Fade-in Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the fade-in effect on titles and paragraphs */
+.agi h2, .agi p, .agi h3 {
+    opacity: 0;
+    animation: fadeInUp 1.2s forwards;
+}
+
+/* Delayed animation for each element */
+.agi h2 {
+    animation-delay: 0.3s;
+}
+
+.agi p {
+    animation-delay: 0.6s;
+}
+
+.agi h3 {
+    animation-delay: 0.9s;
+}
+
+/* Mobile Adaptation */
+@media screen and (max-width: 768px) {
+    .agi {
+        padding: 20px;
+    }
+
+    .agi h2 {
+        font-size: 2.5em;
+    }
+
+    .agi p {
+        font-size: 1em;
+    }
+
+    .agi .button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+
+
+/* Ecological Collapse */
+/* General Layout and Global Styling */
+.ecological-collapse {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef2f5; /* Light background for readability */
+    color: #333; /* Dark text for contrast */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .ecological-collapse h2 {
+    font-size: 2.6em;
+    font-weight: bold;
+    text-align: center;
+    color: #1b5e20; /* Earthy green color */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ecological-collapse h2:hover {
+    color: #388e3c; /* Darker green on hover */
+    transform: scale(1.05);
+  }
+  
+  .ecological-collapse p {
+    font-size: 1.2em;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .ecological-collapse p:hover {
+    color: #3e7e47; /* Green shade for interactive effect */
+  }
+  
+  .ecological-collapse h3 {
+    font-size: 2em;
+    color: #388e3c;
+    margin-top: 30px;
+  }
+  
+  .ecological-collapse h4 {
+    font-size: 1.8em;
+    color: #2e7d32;
+    margin-top: 20px;
+  }
+  
+  /* Images and Interactive Effects */
+  .ecological-collapse img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .ecological-collapse img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Interactive List */
+  .ecological-collapse ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  
+  .ecological-collapse ul li {
+    font-size: 1.1em;
+    color: #444;
+    padding: 10px;
+    background-color: #e8f5e9; /* Light green background */
+    margin-bottom: 12px;
+    border-left: 5px solid #388e3c; /* Green accent for list items */
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .ecological-collapse ul li:hover {
+    background-color: #c8e6c9; /* Darker green on hover */
+    border-left: 5px solid #1b5e20;
+    transform: translateX(5px);
+  }
+  
+  .ecological-collapse ul li:active {
+    transform: translateX(10px); /* Slight push effect on click */
+  }
+  
+  /* Resources Section */
+  .ecological-collapse .resources {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+  
+  .ecological-collapse .resources h3 {
+    font-size: 2em;
+    color: #1b5e20;
+    margin-bottom: 20px;
+  }
+  
+  .ecological-collapse .resources ul {
+    padding-left: 20px;
+  }
+  
+  .ecological-collapse .resources ul li {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .ecological-collapse .resources ul li:hover {
+    color: #388e3c;
+    transform: translateX(5px); /* Subtle movement on hover */
+  }
+  
+  .ecological-collapse .resources ul li a {
+    text-decoration: none;
+    color: #388e3c;
+  }
+  
+  .ecological-collapse .resources ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button for interactive actions (e.g., "Read More" or "Get Involved") */
+  .ecological-collapse .cta-btn {
+    display: inline-block;
+    background-color: #388e3c;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .ecological-collapse .cta-btn:hover {
+    background-color: #1b5e20;
+    transform: scale(1.05);
+  }
+  
+  .ecological-collapse .cta-btn:active {
+    transform: scale(1);
+  }
+  
+
+/* Asteroid Impact */
+/* Base styles for Asteroid Impact */
+.asteroid-impact {
+    background: linear-gradient(135deg, #ff5722, #d84315); /* Gradient background */
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    border-left: 5px solid #d84315;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+/* Hover effect for the whole container */
+.asteroid-impact:hover {
+    background: linear-gradient(135deg, #d84315, #ff5722); /* Reverse gradient on hover */
+    transform: scale(1.02); /* Slight zoom effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styling for headers (h2, h3, h4) */
+.asteroid-impact h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    color: #ffeb3b; /* Golden color for the header */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.asteroid-impact h2:hover {
+    color: #ffffff; /* Change color on hover */
+    transform: translateY(-5px); /* Hover lift effect */
+}
+
+.asteroid-impact h3, .asteroid-impact h4 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.asteroid-impact h3:hover, .asteroid-impact h4:hover {
+    color: #ffeb3b;
+    transform: translateX(5px); /* Slide effect on hover */
+}
+
+/* Paragraph styling */
+.asteroid-impact p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.asteroid-impact p:hover {
+    color: #ffffff; /* Lighten text color on hover */
+}
+
+/* List styling */
+.asteroid-impact ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.asteroid-impact ul li {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.asteroid-impact ul li:hover {
+    background-color: #d84315;
+    color: #ffffff;
+    padding-left: 10px; /* Slight indent on hover */
+    border-radius: 5px;
+}
+
+.asteroid-impact a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.asteroid-impact a:hover {
+    color: #ffeb3b; /* Golden yellow color for links */
+    text-decoration: underline;
+}
+
+/* Styling for images */
+.asteroid-impact img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.asteroid-impact img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+/* Button styling */
+.asteroid-impact button {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.asteroid-impact button:hover {
+    background-color: #d84315; /* Slightly darker shade */
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .asteroid-impact {
+        padding: 20px;
+    }
+
+    .asteroid-impact h2 {
+        font-size: 2em;
+    }
+
+    .asteroid-impact h3, .asteroid-impact h4 {
+        font-size: 1.5em;
+    }
+
+    .asteroid-impact p {
+        font-size: 1em;
+    }
+
+    .asteroid-impact ul li {
+        font-size: 1.1em;
+    }
+
+    .asteroid-impact button {
+        font-size: 1.2em;
+        padding: 12px 25px;
+    }
+}
+
+/* Supervolcanic Eruption */
+/* Base styles for Supervolcano */
+.supervolcano {
+    background: linear-gradient(135deg, #ff6a00, #d32f2f); /* Volcanic red-orange gradient */
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    border-left: 5px solid #d32f2f;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in effect */
+}
+
+/* Hover effect for the whole container */
+.supervolcano:hover {
+    background: linear-gradient(135deg, #d32f2f, #ff6a00); /* Reverse gradient for hover */
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Styling */
+.supervolcano h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+    color: #ffeb3b; /* Golden color for emphasis */
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.supervolcano h2:hover {
+    color: #fff;
+    transform: translateY(-5px); /* Hover effect for lift */
+}
+
+/* Subheading Styling */
+.supervolcano h3, .supervolcano h4 {
+    font-size: 2.1em;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.supervolcano h3:hover, .supervolcano h4:hover {
+    color: #ffeb3b;
+    transform: translateX(5px); /* Slight slide effect */
+}
+
+/* Paragraph Styling */
+.supervolcano p {
+    font-size: 1.2em;
+    color: #f5f5f5;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.supervolcano p:hover {
+    color: #ffffff; /* Lighten text on hover */
+}
+
+/* List Styling */
+.supervolcano ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    margin-bottom: 30px;
+}
+
+.supervolcano ul li {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.supervolcano ul li:hover {
+    background-color: #d32f2f;
+    color: #ffffff;
+    padding-left: 10px; /* Slight indent on hover */
+    border-radius: 5px;
+}
+
+/* Anchor link styling */
+.supervolcano a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.supervolcano a:hover {
+    color: #ffeb3b; /* Yellow hover color */
+    text-decoration: underline;
+}
+
+/* Image styling */
+.supervolcano img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.supervolcano img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+/* Button styling */
+.supervolcano button {
+    background-color: #ff6a00;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.supervolcano button:hover {
+    background-color: #d32f2f; /* Darker red for hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .supervolcano {
+        padding: 20px;
+    }
+
+    .supervolcano h2 {
+        font-size: 2em;
+    }
+
+    .supervolcano h3, .supervolcano h4 {
+        font-size: 1.7em;
+    }
+
+    .supervolcano p {
+        font-size: 1em;
+    }
+
+    .supervolcano ul li {
+        font-size: 1.1em;
+    }
+
+    .supervolcano button {
+        font-size: 1.2em;
+        padding: 12px 25px;
+    }
+}
+
+

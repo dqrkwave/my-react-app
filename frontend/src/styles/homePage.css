@@ -1,0 +1,100 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f8e9;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+.home-page h1 {
+    color: #01579b;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.home-page p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+}
+
+.home-page ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.home-page li {
+    margin: 15px 0;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.home-page li:hover {
+    transform: translateY(-5px);
+    background-color: #e1f5fe;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.home-page a {
+    text-decoration: none;
+    color: #0277bd;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.home-page a:hover {
+    color: #0288d1;
+}
+
+.home-page li:nth-child(odd) {
+    background-color: #bbdefb;
+}
+
+.home-page li:nth-child(even) {
+    background-color: #b3e5fc;
+}
+
+.home-page li span {
+    font-weight: bold;
+    color: #01579b;
+}
+
+.home-page .cta-button {
+    padding: 12px 25px;
+    background-color: #039be5;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-page .cta-button:hover {
+    background-color: #0288d1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
