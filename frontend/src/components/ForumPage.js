@@ -2,43 +2,98 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/forumPage.css';
 
-function ForumPage() {
+const ForumPage = () => {
     const [posts, setPosts] = useState([]);
     const [newPost, setNewPost] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [posting, setPosting] = useState(false);
+
+    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+
+    // Fetch posts from the server
+    const fetchPosts = async () => {
+        setLoading(true);
+        setError('');
+        try {
+            const response = await axios.get(`${API_URL}/forum_posts/`);
+            setPosts(response.data);
+        } catch (err) {
+            setError('Failed to load forum posts. Please try again later.');
+        } finally {
+            setLoading(false);
+        }
+    };
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/forum_posts/')
-            .then(response => setPosts(response.data))
-            .catch(error => console.error("Error fetching forum posts", error));
+        fetchPosts();
     }, []);
 
-    const handlePostSubmit = () => {
-        axios.post('http://localhost:8000/api/forum_posts/', { content: newPost })
-            .then(response => {
-                setPosts([...posts, response.data]);
-                setNewPost('');
-            })
-            .catch(error => console.error("Error posting forum content", error));
+    // Handle new post submission
+    const handlePostSubmit = async () => {
+        if (!newPost.trim()) {
+            setError('Post content cannot be empty.');
+            return;
+        }
+        setPosting(true);
+        setError('');
+        try {
+            const response = await axios.post(`${API_URL}/forum_posts/`, { content: newPost });
+            setPosts((prevPosts) => [response.data, ...prevPosts]); // Add new post at the top
+            setNewPost('');
+        } catch (err) {
+            setError('Failed to submit your post. Please try again.');
+        } finally {
+            setPosting(false);
+        }
     };
 
     return (
         <div className="forum-page">
-            <h2>Forum</h2>
-            <textarea
-                value={newPost}
-                onChange={(e) => setNewPost(e.target.value)}
-                placeholder="Write your thoughts here..."
-            />
-            <button onClick={handlePostSubmit}>Post</button>
+            <h2>Community Forum</h2>
+            
+            {/* Post Input Section */}
+            <div className="forum-input-container">
+                <textarea
+                    className="forum-textarea"
+                    value={newPost}
+                    onChange={(e) => setNewPost(e.target.value)}
+                    placeholder="Write your thoughts here..."
+                    maxLength={500} // Optional limit
+                />
+                <button 
+                    className="forum-submit-button"
+                    onClick={handlePostSubmit}
+                    disabled={posting}
+                >
+                    {posting ? 'Posting...' : 'Post'}
+                </button>
+            </div>
+            {error && <p className="forum-error">{error}</p>}
 
-            <h3>Forum Posts:</h3>
-            <ul>
-                {posts.map(post => (
-                    <li key={post.id}>{post.content}</li>
-                ))}
-            </ul>
+            {/* Forum Posts Section */}
+            {loading ? (
+                <p>Loading posts...</p>
+            ) : (
+                <>
+                    {posts.length > 0 ? (
+                        <ul className="forum-posts">
+                            {posts.map((post) => (
+                                <li key={post.id} className="forum-post">
+                                    <div className="forum-post-content">{post.content}</div>
+                                    <div className="forum-post-meta">
+                                        <span>Posted on {new Date(post.created_at).toLocaleString()}</span>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>No posts yet. Be the first to share your thoughts!</p>
+                    )}
+                </>
+            )}
         </div>
     );
-}
+};
 
 export default ForumPage;
