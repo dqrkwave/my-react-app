@@ -19,6 +19,7 @@ const ForumPage = () => {
             const response = await axios.get(`${API_URL}/forum_posts/`);
             setPosts(response.data);
         } catch (err) {
+            console.error('Error fetching posts:', err.response || err.message);
             setError('Failed to load forum posts. Please try again later.');
         } finally {
             setLoading(false);
@@ -35,13 +36,19 @@ const ForumPage = () => {
             setError('Post content cannot be empty.');
             return;
         }
+
         setPosting(true);
         setError('');
         try {
-            const response = await axios.post(`${API_URL}/forum_posts/`, { content: newPost });
-            setPosts((prevPosts) => [response.data, ...prevPosts]); // Add new post at the top
+            const response = await axios.post(
+                `${API_URL}/forum_posts/`,
+                { content: newPost },
+                { headers: { 'Content-Type': 'application/json' } }
+            );
+            setPosts((prevPosts) => [response.data, ...prevPosts]); // Add new post to the top
             setNewPost('');
         } catch (err) {
+            console.error('Error submitting post:', err.response || err.message);
             setError('Failed to submit your post. Please try again.');
         } finally {
             setPosting(false);
