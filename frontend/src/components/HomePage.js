@@ -5,9 +5,11 @@ import '../styles/homePage.css';
 function HomePage() {
     return (
         <div className="home-page">
-            <h1>Threats to Humanity</h1>
-            <p>Explore the different existential threats that humanity faces,the ones that can wipe us out, a topic long debated about since ages, 
-                :</p>
+            <section className="hero">
+                <h1>Global Risks: What Threatens Our Future?</h1>
+                <p>Humanity faces unprecedented challenges. From catastrophic climate change to the rise of artificial intelligence, these existential threats could determine the fate of our species. Explore them here.</p>
+            </section>
+
             <ul>
                 <li><Link to="/threat/nuclear-war">Nuclear War</Link></li>
                 <li><Link to="/threat/climate-change">Climate Change</Link></li>
@@ -16,9 +18,10 @@ function HomePage() {
                 <li><Link to="/threat/ecological-collapse">Ecological Collapse</Link></li>
                 <li><Link to="/threat/asteroid-impact">Asteroid Impact</Link></li>
                 <li><Link to="/threat/supervolcanic-eruption">Supervolcanic Eruption</Link></li>
-                
-                <li><Link to="/forum">Open Forum</Link></li>
+                <li><Link to="/forum">Community Forum</Link></li>
             </ul>
+
+            <Link to="/learn-more" className="cta-button">Discover More</Link>
         </div>
     );
 }
