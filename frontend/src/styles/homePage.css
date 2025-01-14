@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #121212;
+    background-color: #0a0a0a; /* Darker background */
     padding: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #e0e0e0;
@@ -10,15 +10,11 @@
     text-align: center;
 }
 
-.hero {
-    margin-bottom: 50px;
-}
-
 .hero h1 {
     font-size: 48px;
     color: #81d4fa;
     text-transform: uppercase;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 15px #81d4fa, 0 0 30px #81d4fa, 0 0 45px #29b6f6;
 }
 
 .hero p {
@@ -26,6 +22,7 @@
     max-width: 800px;
     margin: 20px auto;
     color: #b0bec5;
+    text-shadow: 0 0 8px #b0bec5, 0 0 15px #81d4fa;
 }
 
 .home-page ul {
@@ -59,11 +56,12 @@
     font-size: 18px;
     font-weight: 600;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0 0 8px #29b6f6;
 }
 
 .home-page a:hover {
     color: #29b6f6;
-    text-shadow: 0 0 8px #29b6f6;
+    text-shadow: 0 0 15px #29b6f6, 0 0 30px #81d4fa;
 }
 
 .cta-button {
@@ -76,10 +74,24 @@
     margin-top: 30px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px #039be5, 0 0 20px #039be5;
 }
 
 .cta-button:hover {
     background-color: #0288d1;
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(2, 136, 209, 0.8);
+    box-shadow: 0 0 20px rgba(2, 136, 209, 0.8), 0 0 30px rgba(2, 136, 209, 0.8);
 }
+
+.image-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
