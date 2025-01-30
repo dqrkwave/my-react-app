@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import '../styles/forumPage.css';
 
 const ForumPage = () => {
@@ -8,8 +9,9 @@ const ForumPage = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [posting, setPosting] = useState(false);
+    const navigate = useNavigate(); // For navigation
 
-    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+    const API_URL = process.env.REACT_APP_API_URL || 'https://my-react-app-drab-zeta.vercel.app//api';
 
     // Fetch posts from the server
     const fetchPosts = async () => {
@@ -58,7 +60,12 @@ const ForumPage = () => {
     return (
         <div className="forum-page">
             <h2>Community Forum</h2>
-            
+
+            {/* Navigation Button */}
+            <button onClick={() => navigate('/')} className="back-button">
+                Go to Home
+            </button>
+
             {/* Post Input Section */}
             <div className="forum-input-container">
                 <textarea

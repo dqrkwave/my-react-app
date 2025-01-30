@@ -53,11 +53,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Your React frontend
+    "https://my-react-app-drab-zeta.vercel.app",  # Your React frontend
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
+   "https://my-react-app-drab-zeta.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True  # If using authentication
