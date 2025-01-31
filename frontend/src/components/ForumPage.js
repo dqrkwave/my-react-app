@@ -6,24 +6,32 @@ import '../styles/forumPage.css';
 const ForumPage = () => {
     const [posts, setPosts] = useState([]);
     const [newPost, setNewPost] = useState('');
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [posting, setPosting] = useState(false);
-    const navigate = useNavigate(); // For navigation
+    const navigate = useNavigate();
 
     const API_URL = process.env.REACT_APP_API_URL || 'https://my-react-app-drab-zeta.vercel.app/api';
+    
+    console.log("API URL:", API_URL);
 
-
-    // Fetch posts from the server
+    // Fetch posts from the API
     const fetchPosts = async () => {
         setLoading(true);
         setError('');
         try {
             const response = await axios.get(`${API_URL}/forum_posts/`);
-            setPosts(response.data);
+            console.log("Fetched posts:", response.data);
+            if (Array.isArray(response.data)) {
+                setPosts(response.data);
+            } else {
+                throw new Error('Invalid data format from API');
+            }
         } catch (err) {
-            console.error('Error fetching posts:', err.response || err.message);
+            console.error('Error fetching posts:', err);
             setError('Failed to load forum posts. Please try again later.');
+            // Set mock data for UI testing if API fails
+            setPosts([{ id: 1, content: "Test Post", created_at: new Date().toISOString() }]);
         } finally {
             setLoading(false);
         }
@@ -48,10 +56,11 @@ const ForumPage = () => {
                 { content: newPost },
                 { headers: { 'Content-Type': 'application/json' } }
             );
-            setPosts((prevPosts) => [response.data, ...prevPosts]); // Add new post to the top
+            console.log("Post submitted:", response.data);
+            setPosts((prevPosts) => [response.data, ...prevPosts]); // Add new post to top
             setNewPost('');
         } catch (err) {
-            console.error('Error submitting post:', err.response || err.message);
+            console.error('Error submitting post:', err);
             setError('Failed to submit your post. Please try again.');
         } finally {
             setPosting(false);
@@ -74,7 +83,7 @@ const ForumPage = () => {
                     value={newPost}
                     onChange={(e) => setNewPost(e.target.value)}
                     placeholder="Write your thoughts here..."
-                    maxLength={500} // Optional limit
+                    maxLength={500}
                 />
                 <button 
                     className="forum-submit-button"
@@ -84,6 +93,7 @@ const ForumPage = () => {
                     {posting ? 'Posting...' : 'Post'}
                 </button>
             </div>
+
             {error && <p className="forum-error">{error}</p>}
 
             {/* Forum Posts Section */}
