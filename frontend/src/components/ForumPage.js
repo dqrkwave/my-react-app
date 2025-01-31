@@ -11,7 +11,8 @@ const ForumPage = () => {
     const [posting, setPosting] = useState(false);
     const navigate = useNavigate(); // For navigation
 
-    const API_URL = process.env.REACT_APP_API_URL || 'https://my-react-app-drab-zeta.vercel.app//api';
+    const API_URL = process.env.REACT_APP_API_URL || 'https://my-react-app-drab-zeta.vercel.app/api';
+
 
     // Fetch posts from the server
     const fetchPosts = async () => {
